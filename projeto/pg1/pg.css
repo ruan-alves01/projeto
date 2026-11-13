@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.layout-escola {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+/* Esconde as bolinhas padrão do input radio */
+.radio-aba {
+  display: none;
+}
+
+/* Menu Lateral */
+.menu-lateral {
+  width: 250px;
+  background-color: #0066ff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.logo-escola {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navegacao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.aba-btn {
+  display: block;
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.aba-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Destaca o botão da aba selecionada no menu */
+#tab-aulas:checked ~ .menu-lateral .label-aulas,
+#tab-notas:checked ~ .menu-lateral .label-notas,
+#tab-turmas:checked ~ .menu-lateral .label-turmas,
+#tab-reunioes:checked ~ .menu-lateral .label-reunioes,
+#tab-calendario:checked ~ .menu-lateral .label-calendario {
+  background-color: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
+
+.btn-sair {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #0044cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+  flex: 1;
+  padding: 30px;
+}
+
+.cabecalho-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cabecalho-topo h1 {
+  font-size: 22px;
+  color: #333;
+}
+
+/* Esconde todas as abas por padrão */
+.conteudo-aba {
+  display: none;
+}
+
+/* Mostra apenas a aba correspondente ao radio marcado */
+#tab-aulas:checked ~ .conteudo-principal .sec-aulas,
+#tab-notas:checked ~ .conteudo-principal .sec-notas,
+#tab-turmas:checked ~ .conteudo-principal .sec-turmas,
+#tab-reunioes:checked ~ .conteudo-principal .sec-reunioes,
+#tab-calendario:checked ~ .conteudo-principal .sec-calendario {
+  display: block;
+}
+
+.conteudo-aba h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Cards e Tabelas */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #0066ff;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.tabela-notas {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tabela-notas th, .tabela-notas td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabela-notas th {
+  background-color: #0066ff;
+  color: white;
+}
