@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+  padding-left: 64px;
+}
+
+.pagina {
+  max-width: 760px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+}
+
+.pagina h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.cartao {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.cartao h2 {
+  margin-bottom: 14px;
+  font-size: 17px;
+  color: #0066ff;
+}
+
+.cartao h3 {
+  margin: 28px 0 6px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
+  font-size: 16px;
+  color: #333;
+}
+
+.cartao h3 + .dica {
+  margin: 0 0 16px;
+}
+
+.cartao p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.perfil-cabeca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.perfil-cabeca .avatar-grande {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #0066ff;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.perfil-cabeca .avatar-grande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil-cabeca strong {
+  display: block;
+  font-size: 20px;
+}
+
+.perfil-cabeca small {
+  color: #777;
+  font-size: 14px;
+}
+
+.dados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+}
+
+.dados dt {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 3px;
+}
+
+.dados dd {
+  font-size: 15px;
+}
+
+.nota-exemplo {
+  margin-top: 16px;
+  font-size: 12px !important;
+  color: #888 !important;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+.campo textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid #0066ff;
+  outline-offset: 1px;
+}
+
+.btn-enviar {
+  padding: 12px 24px;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.campo input[type="file"] {
+  padding: 9px;
+}
+
+.dica {
+  margin-top: 6px;
+  font-size: 12px !important;
+  color: #888 !important;
+}
+
+.acoes-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-secundario {
+  padding: 12px 24px;
+  background: white;
+  color: #8a1f1f;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-secundario:hover {
+  background: #fde8e8;
+}
+
+.btn-enviar:hover {
+  background-color: #0052cc;
+}
+
+.aviso {
+  padding: 14px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.aviso-ok {
+  background: #e3f6e8;
+  color: #1c5a2d;
+}
+
+.aviso-erro {
+  background: #fde8e8;
+  color: #8a1f1f;
+}
+
+.aviso-erro ul {
+  margin: 6px 0 0 18px;
+}
+
+.aviso-simulacao {
+  display: none;
+}
+
+.aviso-simulacao:target {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .dados {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-left: 52px;
+  }
+}

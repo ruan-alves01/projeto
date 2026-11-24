@@ -1,0 +1,146 @@
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #0066ff;
+  color: white;
+  z-index: 20;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-lateral:hover,
+.menu-lateral:focus-within {
+  width: 260px;
+  box-shadow: 4px 0 18px rgba(0, 0, 0, 0.25);
+}
+
+.menu-icone {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu-icone span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+  background: white;
+}
+
+.menu-icone:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -6px;
+  border-radius: 8px;
+}
+
+.menu-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+  padding: 0 20px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0s linear 0.3s;
+}
+
+.menu-lateral:hover .menu-conteudo,
+.menu-lateral:focus-within .menu-conteudo {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease 0.1s, visibility 0s;
+}
+
+.logo-escola {
+  margin-bottom: 24px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-escola h2 {
+  white-space: nowrap;
+  font-size: 19px;
+}
+
+.navegacao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.aba-btn {
+  display: block;
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.aba-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-sair {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #0044cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.menu-divisor {
+  height: 1px;
+  margin: 6px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+a.aba-btn {
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .menu-lateral {
+    width: 52px;
+  }
+
+  .menu-icone {
+    width: 52px;
+  }
+
+  .menu-lateral:hover,
+  .menu-lateral:focus-within {
+    width: 230px;
+  }
+
+  .menu-conteudo {
+    min-width: 230px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-lateral,
+  .menu-conteudo {
+    transition: none;
+  }
+}

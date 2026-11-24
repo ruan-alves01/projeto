@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Escolar - Suporte</title>
+  <link rel="stylesheet" href="paginas.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <aside class="menu-lateral">
+    <div class="menu-icone" tabindex="0" role="button" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu-conteudo">
+      <div class="logo-escola">
+        <h2>Portal Escolar</h2>
+      </div>
+
+      <nav class="navegacao">
+        <a href="pg1.html" class="aba-btn">Aulas</a>
+        <a href="pg1.html" class="aba-btn">Notas</a>
+        <a href="pg1.html" class="aba-btn">Turmas</a>
+        <a href="pg1.html" class="aba-btn">Reuniões</a>
+        <a href="pg1.html" class="aba-btn">Calendário Escolar</a>
+        <a href="pg1.html" class="aba-btn">Mensalidade</a>
+
+        <div class="menu-divisor"></div>
+        <a href="perfil.html" class="aba-btn" target="_blank" rel="noopener">Meu perfil</a>
+        <a href="suporte.html" class="aba-btn">Suporte</a>
+      </nav>
+
+      <div class="rodape-menu">
+        <a href="../projeto.html" class="btn-sair">Sair do Sistema</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="pagina">
+    <h1>Fale com o suporte</h1>
+
+    <div id="enviado" class="aviso aviso-ok aviso-simulacao">
+      Chamado enviado com sucesso! Guarde o seu protocolo:
+      <strong>SUP-20261124-A1B2C3</strong>
+    </div>
+
+    <section class="cartao">
+      <form action="#enviado">
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" maxlength="100" required value="Aluno">
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail para resposta</label>
+          <input type="email" id="email" name="email" maxlength="120" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Escolha um assunto</option>
+            <option value="Acesso e senha">Acesso e senha</option>
+            <option value="Notas e boletim">Notas e boletim</option>
+            <option value="Mensalidade">Mensalidade</option>
+            <option value="Aulas e calendário">Aulas e calendário</option>
+            <option value="Outro assunto">Outro assunto</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" minlength="10" maxlength="2000" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar chamado</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

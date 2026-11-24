@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Escolar - Meu perfil</title>
+  <link rel="stylesheet" href="paginas.css">
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <aside class="menu-lateral">
+    <div class="menu-icone" tabindex="0" role="button" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu-conteudo">
+      <div class="logo-escola">
+        <h2>Portal Escolar</h2>
+      </div>
+
+      <nav class="navegacao">
+        <a href="pg1.html" class="aba-btn">Aulas</a>
+        <a href="pg1.html" class="aba-btn">Notas</a>
+        <a href="pg1.html" class="aba-btn">Turmas</a>
+        <a href="pg1.html" class="aba-btn">Reuniões</a>
+        <a href="pg1.html" class="aba-btn">Calendário Escolar</a>
+        <a href="pg1.html" class="aba-btn">Mensalidade</a>
+
+      <div class="rodape-menu">
+        <a href="../projeto.html" class="btn-sair">Sair do Sistema</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="pagina">
+    
+    <h1>Meu perfil</h1>
+    
+
+    <section class="cartao">
+      <div class="perfil-cabeca">
+        <div class="avatar-grande">AL</div>
+        <div>
+          <strong>Aluno</strong>
+          <small>Estudante</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <h2>Dados do aluno</h2>
+      <dl class="dados">
+        <div>
+          <dt>Nome</dt>
+          <dd>Aluno</dd>
+        </div>
+        <div>
+          <dt>E-mail</dt>
+          <dd>aluno@email.com</dd>
+        </div>
+        <div>
+          <dt>Matrícula</dt>
+          <dd>2026-0001</dd>
+        </div>
+        <div>
+          <dt>Ano letivo</dt>
+          <dd>2026</dd>
+        </div>
+        <div>
+          <dt>Turma</dt>
+          <dd>3º Ano B - Ensino Médio</dd>
+        </div>
+        <div>
+          <dt>Turno</dt>
+          <dd>Matutino</dd>
+        </div>
+        <div>
+          <dt>Coordenador</dt>
+          <dd>Prof. Carlos Silva</dd>
+        </div>
+      </dl>
+      <p class="nota-exemplo">Nome, e-mail e foto podem ser alterados em Configurações, logo abaixo. Os demais dados são exemplos.</p>
+    </section>
+
+    <section class="cartao" id="configuracoes">
+      <h2>Configurações</h2>
+
+      <div id="salvo" class="aviso aviso-ok aviso-simulacao">
+        Alterações salvas com sucesso!
+      </div>
+
+      <form action="#salvo">
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" maxlength="100" required value="Aluno">
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" maxlength="120" required value="aluno@email.com">
+        </div>
+
+        <div class="campo">
+          <label for="foto">Foto de perfil</label>
+          <input type="file" id="foto" name="foto" accept="image/jpeg,image/png,image/webp">
+          <p class="dica">JPG, PNG ou WEBP, até 2 MB. Deixe em branco para manter a foto atual.</p>
+        </div>
+
+        <div class="acoes-form">
+          <button type="submit" class="btn-enviar">Salvar alterações</button>
+        </div>
+      </form>
+
+      <h3>Alterar senha</h3>
+      <p class="dica">Opcional. Use só se quiser trocar a senha. A nova senha precisa ter pelo menos 8 caracteres.</p>
+
+      <div id="senha-ok" class="aviso aviso-ok aviso-simulacao">
+        Senha alterada com sucesso!
+      </div>
+
+      <form action="#senha-ok">
+        <div class="campo">
+          <label for="senha_atual">Senha atual</label>
+          <input type="password" id="senha_atual" name="senha_atual" autocomplete="current-password" required>
+        </div>
+
+        <div class="campo">
+          <label for="senha_nova">Nova senha</label>
+          <input type="password" id="senha_nova" name="senha_nova" minlength="8" maxlength="72" autocomplete="new-password" required>
+        </div>
+
+        <div class="campo">
+          <label for="senha_confirma">Confirmar nova senha</label>
+          <input type="password" id="senha_confirma" name="senha_confirma" minlength="8" maxlength="72" autocomplete="new-password" required>
+        </div>
+
+        <div class="acoes-form">
+          <button type="submit" class="btn-enviar">Alterar senha</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>
